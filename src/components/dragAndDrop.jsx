@@ -5,13 +5,11 @@ import './components.css'
 
 function previewFiles ()
 {
-
     var preview = document.getElementById( 'preview' );
     var files = document.getElementById( 'file' ).files;
 
     function readAndPreview ( file )
     {
-
         // Make sure `file.name` matches our extensions criteria
         if ( /\.(jpe?g|png)$/i.test( file.name ) )
         {
@@ -28,9 +26,7 @@ function previewFiles ()
 
             reader.readAsDataURL( file );
                     console.log(files);
-
         }
-
     }
 
     if ( files )
@@ -38,6 +34,8 @@ function previewFiles ()
         [].forEach.call( files, readAndPreview );
     }
 }
+
+
 
 
 
@@ -75,6 +73,5 @@ function DragAndDrop ()
     );
 }
 
-export { previewFiles }
 
 export default DragAndDrop;
