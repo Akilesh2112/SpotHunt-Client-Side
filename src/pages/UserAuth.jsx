@@ -2,6 +2,8 @@ import React from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 import { useHistory } from 'react-router-dom';   //button onclick navigate to /hash page
 
+//Importing css
+import './pages.css';
 
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
@@ -27,7 +29,7 @@ const useStyles = makeStyles( ( theme ) => ( {
     //     display:'flex',
     // },
     box: {
-        backgroundColor: 'pink',
+        backgroundColor: '#84A7CF',
         padding: 4,
         borderRadius: 5,
         display: 'flex',
@@ -52,9 +54,10 @@ function UserAuth ()
     const classes = useStyles();
     const { isAuthenticated, user } = useAuth0();
     const history = useHistory();
-    const handleClick = () => history.push('/hash');
+    const handleClick = () => history.push( '/hash' );
 
     return (
+        
         <div className={ classes.Main }>
             <Box className={ classes.box } component='span' m={ 1 } >
                 { isAuthenticated && (
@@ -81,17 +84,16 @@ function UserAuth ()
                     ) }
                 </div>
             </Box>
-            
+
             <Container fixed className={ classes.Container }>
 
-                <Button variant="contained" color="primary" onClick={handleClick}>
-                    Let's go
+                <Button variant="contained" color="primary" onClick={ handleClick }>
+                    Hash Image
                 </Button>
 
             </Container>
         </div>
     );
-
 }
 
 
