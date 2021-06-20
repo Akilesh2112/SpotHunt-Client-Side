@@ -16,3 +16,6 @@
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### ***__NOTE__:***
+<p> make sure to run this application in port localhost:3000 otherwise the authentication will won't work properly </p>
